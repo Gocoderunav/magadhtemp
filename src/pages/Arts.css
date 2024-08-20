@@ -1,0 +1,106 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Ensures the image doesn't exceed a certain height */
+    object-fit: cover;
+    display: block;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #7575dc;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .description {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .slide img {
+        max-height: 350px; /* Adjust max-height for smaller screens */
+        object-fit: contain; /* Ensures the entire image is visible without being cut off */
+    }
+
+    .arrow {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .description {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .slide img {
+        max-height: 250px; /* Further adjust max-height for very small screens */
+        object-fit: contain; /* Ensures the entire image is visible without being cut off */
+    }
+
+    .arrow {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+}

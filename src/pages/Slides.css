@@ -1,0 +1,82 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide img {
+    width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    display: block;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(29, 6, 133, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    background: rgba(20, 115, 209, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .slide img {
+        object-fit: contain; /* Ensures the image fits within the container without cutting off parts of the image */
+    }
+}
+
+@media (max-width: 480px) {
+    .slide img {
+        height: auto; /* Adjust height for smaller screens */
+        object-fit: contain; /* Ensures the image fits within the container */
+    }
+
+    .left-arrow,
+    .right-arrow {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+}

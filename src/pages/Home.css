@@ -1,0 +1,187 @@
+:root {
+  --primary-color: #1A5276;  /* A deep blue color */
+  --secondary-color: #F5F5DC;  /* Beige color for background */
+  --text-color: #333333;
+  --accent-color: #3498DB;  /* A vibrant blue color for accents */
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-size: cover;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.about-us {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(26, 82, 118, 0.2);
+}
+.slides-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure the section takes full width */
+}
+
+.slides-section img {
+  width: 100%; /* Make the image fill the width of its container */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container without cutting off */
+  border-radius: 10px; /* Optional: Adds a border-radius to the images */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+h1 {
+  font-size: 3.5em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: var(--accent-color);
+  margin: 30px 0 20px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.2em;
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.typed-element {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.arts-map-container {
+  display: flex;
+  margin: auto;
+  
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  gap: 20px; /* Adjust spacing between Arts and Map */
+}
+
+.map-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(52, 152, 219, 0.1);
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(26, 82, 118, 0.2);
+  overflow: hidden;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.map-container img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .home {
+      padding: 20px;
+  }
+  .slides-section img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+    object-fit: contain; /* Ensure the entire image is visible */
+  }
+
+  .content-container, .arts-map-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .about-us {
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 2.5em;
+  }
+
+  h2 {
+      font-size: 2em;
+  }
+
+  p {
+      font-size: 1em;
+  }
+
+  .typed-element {
+      font-size: 1.2em;
+  }
+
+  .map-container {
+      max-width: 300px;
+      max-height: 300px;
+  }
+}
+
+@media (max-width: 1024px) { /* Target devices with width 1024px and below, like iPad Pro */
+  .content-container {
+      flex-direction: column; /* Stack Intro and Slides vertically */
+      align-items: center;
+  }
+
+  .slides-section img {
+      object-fit: contain; /* Ensure the entire image is visible */
+  }
+}
+
+@media (max-width: 912px) { /* Target devices like Surface Pro 7 */
+  .content-container {
+      flex-direction: column; /* Stack Intro and Slides vertically */
+      align-items: center;
+  }
+
+  .slides-section img {
+      object-fit: contain; /* Ensure the entire image is visible */
+  }
+}

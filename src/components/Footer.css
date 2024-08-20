@@ -1,0 +1,138 @@
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0 20px;
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 20px;
+    min-width: 200px;
+  }
+
+  .footer-section p{
+    color: white;
+  }
+  
+  
+  .footer-section h3 {
+    color: #DAA520;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #DAA520;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+
+  }
+  
+  .social-icon:hover {
+    color: #DAA520;
+  }
+  
+  .footer-section{
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+  }
+  .footer-bottom p {
+     color:white;
+
+  }
+
+  .footer-bottom{
+    text-align: center;
+  }
+  
+  .order-options {
+    position: absolute;
+    background-color: gold;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    top: 30px;
+    left: 3em;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .order-options-footer {
+    display: grid;
+    position: absolute;
+    background-color: gold;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    top: 0px;
+    left: 12rem;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  
+  .order-options a {
+    display: block;
+    color: #333;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-options a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer-section {
+      margin-bottom: 30px;
+    }
+  }
+
+
+
+
+
