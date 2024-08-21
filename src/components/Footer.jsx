@@ -83,7 +83,7 @@ export const Footer = () => {
               <ImLocation2 /> 
             </a>
             <a href="https://www.instagram.com/gau_rawww/" className="social-icon" target="_blank" rel="noopener noreferrer">
-          <FaInstagram />  Gaurav Gangwar
+          <FaInstagram />Gaurav
         </a>
           </div>
         </div>
